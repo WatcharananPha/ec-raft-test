@@ -20,7 +20,7 @@ def main():
         model="biodatlab/ec-raft",
         tensor_parallel_size=1,
         max_model_len=25000,
-        dtype="bfloat16"
+        dtype="float16"
     )
     embed_model = SentenceTransformer("malteos/scincl")
     collection = chromadb.PersistentClient(path="./clinical_trials_chroma_all").get_collection("clinical_trials_studies")
